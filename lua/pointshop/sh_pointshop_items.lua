@@ -98,7 +98,14 @@ PS.Items = {
 		BasePrice = 500,
 		Type = PS.ITEM_TYPE_WEAPON,
 		Icon = "entities/m9k_usas.png",
-		Description = "Full auto shotgun with a 20 round drum mag.",
+		Description = "Full auto shotgun with a 20 round drum mag. Has mediocre firerate but a fast reload.",
+	},
+	["m9k_striker12"] = {
+		Name = "Striker 12",
+		BasePrice = 450,
+		Type = PS.ITEM_TYPE_WEAPON,
+		Icon = "entities/m9k_striker12.png",
+		Description = "Full auto shotgun with a 12 round drum mag. Has a fast firerate but a slow reload.",
 	},
 	["m9k_davy_crockett"] = {
 		Name = "Davy Crockett",
