@@ -1,6 +1,4 @@
 -- A lot of this was repurposed from a roleplay addon I was working on and so has very messy code. I don't expect you to have to edit anything here but please dm me if needed.
--- This script may or may not interfere with addons that modify player speed. This can be removed easily if needed.
-
 if SERVER then
     AddCSLuaFile()
 end
@@ -8,47 +6,6 @@ end
 local PLAYER = FindMetaTable("Player")
 
 if SERVER then
-
-	hook.Add("Think", "RPGMovementHandler", function()
-
-		for _, ply in ipairs(player.GetAll()) do
-			if not IsValid(ply) or not ply:IsPlayer() then continue end
-
-			if not ply.SEF_BaseWalk then
-				ply.SEF_BaseWalk = ply:GetWalkSpeed()
-			end
-
-			if not ply.SEF_BaseRun then
-				ply.SEF_BaseRun = ply:GetRunSpeed()
-			end
-
-			local baseWalk = ply.SEF_BaseWalk
-			local baseRun = ply.SEF_BaseRun
-
-			local mult = 1
-
-			if ply:HavePassive("CounterspellBuff") then
-				mult = mult * 1.125
-			end
-
-			if ply:HaveEffect("sci_effect_slow") then
-				mult = mult * 0.8
-			end
-
-			local wep = ply:GetActiveWeapon()
-
-			if IsValid(wep)
-			and wep:GetClass() == "faw_longbow"
-			and wep.GetLoaded
-			and wep:GetLoaded() then
-
-				mult = mult * 0.25
-			end
-
-			ply:SetWalkSpeed(baseWalk * mult)
-			ply:SetRunSpeed(baseRun * mult)
-		end
-	end)
 
 	hook.Add("EntityTakeDamage", "PassiveDamageHandler", function(target, dmginfo)
 		local attacker = dmginfo:GetAttacker()
