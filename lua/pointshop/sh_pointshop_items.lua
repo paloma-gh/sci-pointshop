@@ -316,14 +316,6 @@ PS.Items = {
 		Icon = "hudicons/sci_passive_bleed.png",
 		Description = "Small chance to make target bleed when shot.",
 	},
-	["sci_passive_slowdown"] = {
-		Name = "Slowdown",
-		BasePrice = 750,
-		Type = PS.ITEM_TYPE_BONUS,
-		BonusType = PS.BONUS_TYPE_OFFENSIVE,
-		Icon = "hudicons/sci_passive_slowdown.png",
-		Description = "Targets are briefly slowed on hit.",
-	},
 }
 
 
