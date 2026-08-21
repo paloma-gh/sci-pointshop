@@ -85,6 +85,27 @@ PS.Items = {
 		Icon = "sef_icons/fallimmune.png",
 		Description = "Grants positive status effects to players in proximity. Can be customized.",
 	},
+	["gb5_proj_howitzer_shell_in"] = {
+		Name = "Howitzer Shell (Incendiary)",
+		BasePrice = 1250,
+		Type = PS.ITEM_TYPE_ENTITY,
+		Icon = "icon16/bomb.png",
+		Description = "Incendiary shell, sets things on fire.",
+	},
+	["gb5_proj_howitzer_shell_cl"] = {
+		Name = "Chlorine Shell",
+		BasePrice = 1750,
+		Type = PS.ITEM_TYPE_ENTITY,
+		Icon = "icon16/bomb.png",
+		Description = "Chlorine gas shell, leaves a cloud of gas that blinds and damages players inside. Ignores armor.",
+	},
+	["gb5_nuclear_davycrockett"] = {
+		Name = "Davy Crockett",
+		BasePrice = 10000,
+		Type = PS.ITEM_TYPE_ENTITY,
+		Icon = "icon16/bomb.png",
+		Description = "Miniature nuclear artillery shell with a devastating blast.",
+	},
 	---------------- Weapons ----------------
 	["m9k_minigun"] = {
 		Name = "M134 Minigun",
